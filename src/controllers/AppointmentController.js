@@ -12,8 +12,20 @@ class AppointmentController {
     }
   }
 
-  store(request, response) {
-    response.json({ message: 'Store' });
+  async store(request, response) {
+    const { body } = request;
+
+    try {
+      const appointment = await AppointmentModel.create(body);
+
+      response.json({
+        message: 'Appointment created successfully',
+        data: appointment,
+      });
+    } catch ({ message }) {
+      console.log(message);
+      response.status(400).json({ message: 'Something wrong happened...' });
+    }
   }
 
   update(request, response) {
