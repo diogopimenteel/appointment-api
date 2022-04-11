@@ -1,6 +1,15 @@
+import AppointmentModel from '../models/AppointmentModel.js';
+
 class AppointmentController {
-  index(request, response) {
-    response.json({ message: 'Index' });
+  async index(request, response) {
+    try {
+      const appointments = await AppointmentModel.find();
+
+      response.json(appointments.length === 0 ? { message: 'Empty list' } : { data: appointments });
+    } catch ({ message }) {
+      console.log(message);
+      response.status(400).json({ message: 'Something wrong happened...' });
+    }
   }
 
   store(request, response) {
