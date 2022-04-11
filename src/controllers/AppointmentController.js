@@ -44,8 +44,19 @@ class AppointmentController {
     }
   }
 
-  remove(request, response) {
-    response.json({ message: 'Remove' });
+  async remove(request, response) {
+    const { id } = request.params;
+
+    try {
+      const appointment = await AppointmentModel.findById(id);
+
+      await appointment.remove();
+
+      response.json({ message: 'Appointment removed' });
+    } catch ({ message }) {
+      console.log(message);
+      response.status(400).json({ message: 'Something went wrong' });
+    }
   }
 }
 
