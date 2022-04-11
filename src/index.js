@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 
 import AppointmentRouter from './routes/AppointmentRouter.js';
+import './database/Connection.js';
 
 const app = express();
 const { PORT } = process.env;
