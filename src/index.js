@@ -3,9 +3,12 @@ import morgan from 'morgan';
 import cors from 'cors';
 
 import AppointmentRouter from './routes/AppointmentRouter.js';
+import startDatabase from './database/Connection.js';
 
 const app = express();
 const { PORT } = process.env;
+
+startDatabase();
 
 app.use(express.json());
 app.use(morgan('dev'));
