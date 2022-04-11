@@ -28,8 +28,20 @@ class AppointmentController {
     }
   }
 
-  update(request, response) {
-    response.json({ message: 'Update' });
+  async update(request, response) {
+    const {
+      body,
+      params: { id },
+    } = request;
+
+    try {
+      const appointment = await AppointmentModel.findByIdAndUpdate(id, body, { new: true });
+
+      return response.json({ message: 'Appointment updated successfully', data: appointment });
+    } catch ({ message }) {
+      console.log(message);
+      return response.status(400).send({ message: 'Something wrong happened...' });
+    }
   }
 
   remove(request, response) {
