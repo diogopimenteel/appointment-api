@@ -1,18 +1,62 @@
+import AppointmentModel from '../models/AppointmentModel.js';
+
 class AppointmentController {
-  index(request, response) {
-    response.json({ message: 'Index' });
+  async index(request, response) {
+    try {
+      const appointments = await AppointmentModel.find();
+
+      response.json(appointments.length === 0 ? { message: 'Empty list' } : { data: appointments });
+    } catch ({ message }) {
+      console.log(message);
+      response.status(400).json({ message: 'Something wrong happened...' });
+    }
   }
 
-  store(request, response) {
-    response.json({ message: 'Store' });
+  async store(request, response) {
+    const { body } = request;
+
+    try {
+      const appointment = await AppointmentModel.create(body);
+
+      response.json({
+        message: 'Appointment created successfully',
+        data: appointment,
+      });
+    } catch ({ message }) {
+      console.log(message);
+      response.status(400).json({ message: 'Something wrong happened...' });
+    }
   }
 
-  update(request, response) {
-    response.json({ message: 'Update' });
+  async update(request, response) {
+    const {
+      body,
+      params: { id },
+    } = request;
+
+    try {
+      const appointment = await AppointmentModel.findByIdAndUpdate(id, body, { new: true });
+
+      return response.json({ message: 'Appointment updated successfully', data: appointment });
+    } catch ({ message }) {
+      console.log(message);
+      return response.status(400).send({ message: 'Something wrong happened...' });
+    }
   }
 
-  remove(request, response) {
-    response.json({ message: 'Remove' });
+  async remove(request, response) {
+    const { id } = request.params;
+
+    try {
+      const appointment = await AppointmentModel.findById(id);
+
+      await appointment.remove();
+
+      response.json({ message: 'Appointment removed' });
+    } catch ({ message }) {
+      console.log(message);
+      response.status(400).json({ message: 'Something went wrong' });
+    }
   }
 }
 
