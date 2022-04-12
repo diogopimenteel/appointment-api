@@ -1,9 +1,9 @@
 import express from 'express';
 
-import AppointmentRouter from './AppointmentRouter.js';
+import appointmentRouter from './appointment-router.js';
 
 const app = express();
 
-app.use('/', AppointmentRouter);
+app.use('/appointment', appointmentRouter);
 
 export default app;

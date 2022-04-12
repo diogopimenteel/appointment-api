@@ -1,4 +1,4 @@
-import AppointmentModel from '../models/AppointmentModel.js';
+import AppointmentModel from '../models/appointment-model.js';
 
 class AppointmentController {
   async index(request, response) {
