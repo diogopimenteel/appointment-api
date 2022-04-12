@@ -2,7 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 
-import routes from './routes';
+import routes from './routes/index.js';
 import startDatabase from './database/connection.js';
 
 const app = express();
