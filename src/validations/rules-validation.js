@@ -1,4 +1,4 @@
-import AppointmentModel from '../models/AppointmentModel.js';
+import AppointmentModel from '../models/appointment-model.js';
 import { verifyTimeWithinRange, verifyRoundTime } from '../utils/validation-util.js';
 
 const validateBusinessLogic = async (request, response, next) => {
