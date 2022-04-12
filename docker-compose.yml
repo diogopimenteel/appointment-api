@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: appointment-api
+    env_file: .env
+    environment:
+      - DATABASE_URL=mongodb://mongo:27017/appointment-pitang
+    ports:
+      - "2022:4001"
+    networks:
+      - app-network
+
+  mongo:
+    image: 'mongo:latest'
+    container_name: 'mongo'
+    ports:
+      - '27100:27017'
+    networks:
+      - app-network    
+
+networks:
+  app-network:
+    driver: bridge
+
