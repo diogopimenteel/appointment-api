@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-const AppointmentValidation = yup.object().shape({
+const inputValidation = yup.object().shape({
   name: yup
     .string()
     .required('Name field required')
@@ -14,4 +14,4 @@ const AppointmentValidation = yup.object().shape({
     .required('Selected date is required'),
 });
 
-export default AppointmentValidation;
+export default inputValidation;
