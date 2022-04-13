@@ -3,7 +3,7 @@ import * as yup from 'yup';
 const inputValidation = yup.object().shape({
   name: yup
     .string()
-    .required('Name field required')
+    .required('Name field is required')
     .min(3)
     .matches(/^[A-Za-zà-úÀ-Ú ]+$/, 'Name must be only characters'),
   birthday: yup.date()

@@ -1,9 +1,12 @@
 import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
+import dotenv from 'dotenv';
 
 import routes from './routes/index.js';
 import startDatabase from './database/connection.js';
+
+dotenv.config();
 
 const app = express();
 const { PORT } = process.env;
