@@ -10,7 +10,7 @@ services:
     environment:
       - DATABASE_URL=mongodb://mongo:27017/appointment-pitang
     ports:
-      - "2022:4001"
+      - "4000:4000"
     networks:
       - app-network
 

@@ -10,6 +10,4 @@ COPY . .
 
 EXPOSE 4001
 
-RUN ls
-
 CMD [ "npm", "run", "start" ]

@@ -7,7 +7,7 @@ This API focuses on managing appointments for COVID-19 vaccination, following so
 - There are 20 vacancies available per day.
 - Only 2 appointments can be made at the same scheduled time.
 - The time interval between one schedule and another is 1 hour.
-- It will only be possible to schedule appointments between 6 AM and 5 PM.
+- It will only be possible to schedule appointments between 6 AM and 6 PM.
 - The patient must inform his/her name, date of birth and day and time for the scheduling.
 
 ### Requirements :white_check_mark:
