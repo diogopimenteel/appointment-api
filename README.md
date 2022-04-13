@@ -4,11 +4,11 @@ API created as a challenge for a job position at Pitang Agile IT.
 
 This API focuses on managing appointments for COVID-19 vaccination, following some rules:
 
-* There are 20 vacancies available per day.
-* Only 2 appointments can be made at the same scheduled time.
-* The time interval between one schedule and another is 1 hour.
-* It will only be possible to schedule appointments between 6 AM and 5 PM.
-* The patient must inform his/her name, date of birth and day and time for the scheduling.
+- There are 20 vacancies available per day.
+- Only 2 appointments can be made at the same scheduled time.
+- The time interval between one schedule and another is 1 hour.
+- It will only be possible to schedule appointments between 6 AM and 5 PM.
+- The patient must inform his/her name, date of birth and day and time for the scheduling.
 
 ### Requirements :white_check_mark:
 - [Node](https://nodejs.org/en/)
