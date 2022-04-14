@@ -5,15 +5,18 @@ dotenv.config();
 
 const { DATABASE_URL } = process.env;
 
-const startDatabase = () => {
-  mongoose
-    .connect(DATABASE_URL)
-    .then(() => {
-      console.log('Database connected...');
-    })
-    .catch((error) => {
-      console.log(`Error to connect to database: ${error}`);
-    });
-};
+mongoose
+  .connect(DATABASE_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log('Database connected...');
+  })
+  .catch((error) => {
+    console.log(`Error to connect to database: ${error}`);
+  });
 
-export default startDatabase;
+const database = mongoose.connection;
+
+export default database;
