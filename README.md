@@ -65,3 +65,20 @@ git clone git@github.com:diogopimenteel/appointment-api.git
  ```sh
  docker-compose up -d
  ```
+
+## Tests :bulb:
+### Using npm :package:
+
+1. Run the command:
+
+```sh
+npm run test
+```
+
+### Using yarn :cat:
+
+1. Run the command:
+
+```sh
+yarn test
+```
