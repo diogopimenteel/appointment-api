@@ -15,10 +15,7 @@ This API focuses on managing appointments for COVID-19 vaccination, following so
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 - [MongoDB](https://www.mongodb.com/)
 
-## Installation :arrow_down:
-
-### Clone this project :octocat:
-
+## Clone this project :octocat:
 ### 1. SSH
 Using the command:
 
@@ -33,6 +30,7 @@ Using the command:
 git clone https://github.com/diogopimenteel/appointment-api.git
 ```
 
+## Installation :arrow_down:
 ### Using npm :package:
 
 1. Install dependencies using the command:
