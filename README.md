@@ -26,7 +26,7 @@ Using the command:
 git clone git@github.com:diogopimenteel/appointment-api.git
 ```
 
-#### 2. HTTP
+### 2. HTTPS
 Using the command:
 
 ```sh
