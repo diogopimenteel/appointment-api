@@ -16,14 +16,14 @@ This API focuses on managing appointments for COVID-19 vaccination, following so
 - [MongoDB](https://www.mongodb.com/)
 
 ## Clone this project :octocat:
-### 1. SSH
+### SSH
 Using the command:
 
 ```sh
 git clone git@github.com:diogopimenteel/appointment-api.git
 ```
 
-### 2. HTTPS
+### HTTPS
 Using the command:
 
 ```sh
