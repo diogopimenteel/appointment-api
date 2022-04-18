@@ -68,7 +68,7 @@ git clone https://github.com/diogopimenteel/appointment-api.git
 
 ## Using Docker :whale:
 
-1. Run the command:
+Run the command:
 
  ```sh
  docker-compose up -d
@@ -77,7 +77,7 @@ git clone https://github.com/diogopimenteel/appointment-api.git
 ## Tests :bulb:
 ### Using npm :package:
 
-1. Run the command:
+Run the command:
 
 ```sh
 npm run test
@@ -85,7 +85,7 @@ npm run test
 
 ### Using yarn :cat:
 
-1. Run the command:
+Run the command:
 
 ```sh
 yarn test
