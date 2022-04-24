@@ -14,8 +14,10 @@ router.post('/', validation(inputValidation), validateBusinessLogic, appointment
 
 router.get('/:id', appointmentController.getOne);
 
-router.put('/:id', appointmentController.update);
+router.put('/:id', validation(inputValidation), validateBusinessLogic, appointmentController.update);
 
 router.delete('/:id', appointmentController.remove);
+
+router.patch('/:id', appointmentController.updateOne);
 
 export default router;
