@@ -92,6 +92,29 @@ class AppointmentController {
     }
     response.status(400).json({ message: 'Invalid id!' });
   }
+
+  async updateOne(request, response) {
+    const {
+      body,
+      params: { id },
+    } = request;
+
+    if (mongoose.Types.ObjectId.isValid(id)) {
+      try {
+        const appointment = await AppointmentModel.findByIdAndUpdate(id, body, { new: true });
+
+        if (!appointment) {
+          return response.status(404).json({ message: 'Appointment not found!' });
+        }
+
+        return response.json({ message: 'Appointment updated successfully', data: appointment });
+      } catch ({ message }) {
+        console.log(message);
+        return response.status(400).send({ message: 'Something wrong happened...' });
+      }
+    }
+    response.status(400).json({ message: 'Invalid id!' });
+  }
 }
 
 export default AppointmentController;
