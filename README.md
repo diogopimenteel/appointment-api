@@ -65,6 +65,13 @@ git clone https://github.com/diogopimenteel/appointment-api.git
 2. DATABASE_TEST_URL= Your mongoDB URL for test
 3. PORT= The port you want to use
 
+## Using Heroku :rocket:
+
+Using Heroku With MongoDB Atlas
+
+```
+https://appointment-pitang-api.herokuapp.com
+```
 
 ## Using Docker :whale:
 
