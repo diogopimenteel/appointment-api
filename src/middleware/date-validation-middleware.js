@@ -7,7 +7,7 @@ const validateBusinessLogic = async (request, response, next) => {
   if (!verifyTimeWithinRange(date)) {
     return response
       .status(400)
-      .json({ message: 'It will only be possible to schedule appointments between 6 AM and 6 PM' });
+      .json({ message: 'It will only be possible to schedule appointments between 6 AM and 6:30 PM' });
   }
 
   if (!verifyRoundTime(date)) {
