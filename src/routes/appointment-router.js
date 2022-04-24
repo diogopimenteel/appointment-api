@@ -12,7 +12,9 @@ router.get('/', appointmentController.index);
 
 router.post('/', validation(inputValidation), validateBusinessLogic, appointmentController.store);
 
-router.put('/:id', validation(inputValidation), validateBusinessLogic, appointmentController.update);
+router.get('/:id', appointmentController.getOne);
+
+router.put('/:id', appointmentController.update);
 
 router.delete('/:id', appointmentController.remove);
 

@@ -15,15 +15,22 @@ This API focuses on managing appointments for COVID-19 vaccination, following so
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 - [MongoDB](https://www.mongodb.com/)
 
-## Installation :arrow_down:
-
-### Clone this project :octocat:
-1. Using the command:
+## Clone this project :octocat:
+### SSH
+Using the command:
 
 ```sh
 git clone git@github.com:diogopimenteel/appointment-api.git
 ```
 
+### HTTPS
+Using the command:
+
+```sh
+git clone https://github.com/diogopimenteel/appointment-api.git
+```
+
+## Installation :arrow_down:
 ### Using npm :package:
 
 1. Install dependencies using the command:
@@ -54,14 +61,32 @@ git clone git@github.com:diogopimenteel/appointment-api.git
 
 ## .env variables :house:
 
-1. DATABASE_URL= Your MongoDB URL 
-2. PORT= The port you want to use
+1. DATABASE_URL= Your mongoDB URL 
+2. DATABASE_TEST_URL= Your mongoDB URL for test
+3. PORT= The port you want to use
 
 
 ## Using Docker :whale:
 
-1. Run the command:
+Run the command:
 
  ```sh
  docker-compose up -d
  ```
+
+## Tests :bulb:
+### Using npm :package:
+
+Run the command:
+
+```sh
+npm run test
+```
+
+### Using yarn :cat:
+
+Run the command:
+
+```sh
+yarn test
+```
