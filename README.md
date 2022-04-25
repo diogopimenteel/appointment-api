@@ -4,8 +4,15 @@
 </div>
 
 
-## Project :computer: :clock1: :syringe:
+## Live example: [Appointment App](https://appointment-client.netlify.app/) :rocket:
 
+- Frontend application hosted on [Netlify](https://www.netlify.com/)
+
+- Backend API hosted on [Heroku](https://www.heroku.com/)
+
+- MongoDB hosted on [MongoDB Atlas](https://www.mongodb.com/atlas)
+
+## Project :computer: :clock1: :syringe:
 
 API created as a challenge for a job position at Pitang Agile IT.
 
