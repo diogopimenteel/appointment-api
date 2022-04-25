@@ -1,5 +1,9 @@
 # appointment-api :computer::clock1::syringe:
 
+<div align="center">
+  <img alt="I took my shot" src="/.github/file-20210524-19-aq22jo.jpg" width="75%">
+</div>
+
 API created as a challenge for a job position at Pitang Agile IT.
 
 This API focuses on managing appointments for COVID-19 vaccination, following some rules:
