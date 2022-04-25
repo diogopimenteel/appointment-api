@@ -1,5 +1,4 @@
-# appointment-api :computer::clock1::syringe:
-
+<h1 align='center'>Appointments API for COVID-19 vaccination</h1>
 <div align="center">
   <img alt="I took my shot" src="/.github/file-20210524-19-aq22jo.jpg" width="75%">
 </div>
